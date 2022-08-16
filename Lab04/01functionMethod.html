@@ -46,6 +46,14 @@
         console.log(`fadd1=${fadd1}`);
         fadd2=fadd1; //fadd1的內容給fadd2
         console.log(`fadd2=${fadd2}`);
+
+        // =========立即執行===============
+        // IIFE
+
+        (function(a,b){
+            console.log(a+b);
+        })(300,500) //800
+
     </script>
 </body>
 </html>

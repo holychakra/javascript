@@ -7,12 +7,32 @@
 <body>
     <script>
             //廣域(全域)變數
+            var a = 100; //global variable
+            var b = 50
     
-    
-            //函數宣告定義
-    
-    
+            //函數宣告定義 
+            function f(){
+                var a =10; //local variable
+                console.log(`function in a= ${a}`); //10
+                console.log(`window.a = ${window.a}`); // 100
+                console.log(`this.a = ${this.a}`); // 100
+                
+            }
+            
+            // 區塊變數 {} 用let (不是只function{}，是if{}、while{}、for{}... )
+            function f(){
+                var b =5; //local variable
+                for (let b=1;b<=3;b++){
+                    console.log(`block a = ${b}`)
+                }
+                console.log(`function in a = ${b}`)
+            }
+
+
             //呼叫函數
+            console.log(`function out calling before a = ${a}`);
+            f();
+            console.log(`function out calling before a = ${a}`);
 
 
     </script>
