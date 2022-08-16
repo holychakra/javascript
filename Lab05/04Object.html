@@ -8,9 +8,27 @@
     <div id="myDiv"></div>
     <script>
     
-    
+    let cars={
+        brand:'tesla',
+        'max speed':250,
+        color:'while',
+        display:function(){
+            return `${this.brand}-${this['max speed']}`
+        }
 
+    }
+
+    console.log(cars)//{brand: 'tesla', max speed: 250, color: 'while', display: ƒ}
+    console.log(cars.display());//tesla-250
+
+    let div1 = document.getElementById('myDiv')
     //for..in
+    for (let prop in cars){
+        // console.log(prop)
+        // console.log(cars[prop])
+        console.log(`cars[${prop}]:${cars[prop]}`)
+        div1.innerHTML+=`<li>cars[${prop}]:${cars[prop]}</li>`
+    }
 
     
     </script>        
