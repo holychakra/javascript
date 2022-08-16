@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01getElementContent.html</title>
+</head>
+<body>    
+    <div id="myDiv"></div>
+    <script>
+        var ele=document.getElementById("myDiv");
+        console.log(ele);  //<div id="myDiv"></div>
+        ele.innerHTML="AIEN18";
+        // ele.innerHTML=ele.innerHTML+"<h2>JavaScript</h2>";  //h2 是 block 標籤 粗體
+        ele.innerHTML+="<h2>JavaScript</h2>"
+    </script>
+</body>
+</html>

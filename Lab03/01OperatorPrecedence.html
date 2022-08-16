@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01OperatorPrecedence.html</title>
+</head>
+<body>
+    <script>  
+        //算術運算子++
+        let a = 1;
+        a++;
+        console.log(`a=${a}`);
+
+        a = 1;
+        ++a;
+        console.log(`a=${a}`);
+
+        a = 1;
+        a=a+1;
+        console.log(`a=${a}`);
+        
+
+        // ++在前面 先做++
+        a = 1;
+        let b = 10*++a;         //1. ++a; 2.b10*a
+        console.log(`a=${a},b=${b}`);   //a=2,b=20
+
+        a = 1;
+        b = 10*a++;  //1. b=10*a; 2.a++
+        console.log(`a=${a},b=${b}`); //a =2,b=10
+
+
+        //關係運算子
+        //值相等== 
+        //值及資料類型相等===
+        let x = 5;
+        let y = "5";
+
+        console.log(x==y);  //true
+        console.log(x===y); //false
+
+        //邏輯運算子
+        console.log(7||8); //7
+        console.log(7&&8); //8
+        console.log(0||8); //8
+
+        //三元運算子（判斷式）?（真時回傳值）:（假時回傳值）
+        let i = 5;
+        let j=i>0?1:2;
+
+        //上面相當於下面運算
+        // if (i>0)
+        //     j=1;
+        // else
+        //     j=2;
+
+
+        let k = "abc";  //不在五個會轉為false 的質裡面。 
+        let q = k?1:2;
+        console.log(`q=${q}`);
+
+
+
+    </script>
+        
+</body>
+</html>
